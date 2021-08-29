@@ -5,7 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object SpaceXService {
 
-    private val BASE_URL = "https://api.spacexdata.com"
+    private val BASE_URL = "https://api.spacexdata.com/"
 
     // Service builder for Network calls
     fun getSpaceXDataService() : SpaceXApi {

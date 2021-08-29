@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:title="@string/upcoming_launches"
+        android:id="@+id/upcoming_menu_option"
+        app:showAsAction="never"/>
+    <item
+        android:title="@string/past_launches"
+        android:id="@+id/pastLaunches_menu_option"
+        app:showAsAction="never"/>
+    <item
+        android:title="@string/crew"
+        android:id="@+id/crew_menu_option"
+        app:showAsAction="never"/>
+    <item
+        android:title="@string/sort_a_z"
+        android:id="@+id/sort_menu_option"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_sort"/>
+
+</menu>

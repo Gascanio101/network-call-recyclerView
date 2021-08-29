@@ -33,7 +33,6 @@ android {
 }
 
 dependencies {
-
     //  def room_version = "2.3.0"
 
     def lifecycle_version = "2.3.1"
@@ -74,4 +73,10 @@ dependencies {
 
     // LiveData
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+
+    // Navigation & Fragments
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.5'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
 }

@@ -3,7 +3,7 @@ package com.example.rv_api.models.launches.upcoming
 
 import com.google.gson.annotations.SerializedName
 
-data class UpcomingItem(
+data class LaunchItem(
 
     /* TODO Future data-structure
     @SerializedName("crew")
@@ -27,5 +27,19 @@ data class UpcomingItem(
     @SerializedName("launchpad")
     val launchpad: String,
     @SerializedName("name")
-    val name: String
+    val name: String,
+    @SerializedName("links")
+    val links: Links,
+)
+
+data class Links(
+    @SerializedName("patch")
+    val patch: Patch
+)
+
+data class Patch(
+    @SerializedName("large")
+    val large: String,
+    @SerializedName("small")
+    val small: String
 )

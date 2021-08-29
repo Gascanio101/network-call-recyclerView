@@ -3,8 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.16458333333333333" />
+        <entry key="app/src/main/res/layout/activity_crew_profile.xml" value="0.3039105319504704" />
+        <entry key="app/src/main/res/layout/activity_launches_detail.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/crew_recycler_cell.xml" value="0.1503623188405797" />
+        <entry key="app/src/main/res/layout/fragment_past.xml" value="0.17798913043478262" />
+        <entry key="app/src/main/res/layout/fragment_upcoming.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/launches_recycler_cell.xml" value="0.25739033406914996" />
         <entry key="app/src/main/res/layout/upcoming_recycler_cell.xml" value="0.2833333333333333" />
+        <entry key="app/src/main/res/menu/home_menu.xml" value="0.25" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.15520833333333334" />
       </map>
     </option>
   </component>
