@@ -46,8 +46,8 @@
 
     <ImageView
         android:id="@+id/iv_flight_image_detail"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
         android:layout_margin="16dp"
         android:textColor="@color/black"
         android:textSize="18sp"

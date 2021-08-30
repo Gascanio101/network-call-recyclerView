@@ -11,6 +11,9 @@ class LaunchesDetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_launches_detail)
 
+        val actionBar = supportActionBar
+        actionBar?.title = "Space X - Launch Details"
+
         val name = intent.getStringExtra("name").toString()
         val details = intent.getStringExtra("details").toString()
         val flightNumber = intent.getStringExtra("flightNumber").toString()
@@ -20,11 +23,18 @@ class LaunchesDetailActivity : AppCompatActivity() {
         tv_details_detail.text = details
 
         val launchImage = intent.getStringExtra("image").toString()
-        Picasso.with(this)
-            .load(launchImage)
-            .placeholder(R.drawable.default_launch)
-            .resize(800,800)
-            .centerCrop()
-            .into(iv_flight_image_detail)
+
+        when (launchImage) {
+            "No image" -> {
+                iv_flight_image_detail.setImageResource(R.drawable.default_launch)
+            }
+            else -> {
+                Picasso.with(this)
+                    .load(launchImage)
+                    .resize(800,800)
+                    .centerInside()
+                    .into(iv_flight_image_detail)
+            }
+        }
     }
 }

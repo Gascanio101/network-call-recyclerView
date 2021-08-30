@@ -10,65 +10,11 @@
         android:id="@+id/home_recyclerview"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_margin="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo_header" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/logo_header"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/spaceX_logo"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
-            android:src="@drawable/space_x_logo"
-            app:civ_border_color="@color/black"
-            app:civ_border_width="2dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/launches_main_tv"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/upcoming_past_launches_tv"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
-
-        <TextView
-            android:id="@+id/launches_main_tv"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textColor="@color/black"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:text="@string/launches"
-            app:layout_constraintBottom_toBottomOf="@+id/spaceX_logo"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/spaceX_logo"
-            app:layout_constraintTop_toTopOf="@+id/spaceX_logo" />
-
-        <TextView
-            android:id="@+id/upcoming_past_launches_tv"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textColor="@color/black"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:text="@string/upcoming"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/spaceX_logo"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

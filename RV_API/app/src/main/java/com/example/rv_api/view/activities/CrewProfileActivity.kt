@@ -11,6 +11,8 @@ class CrewProfileActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_crew_profile)
 
+        supportActionBar?.title = "Space X - Profile"
+
         val name = intent.getStringExtra("name").toString()
         val agency = intent.getStringExtra("agency").toString()
         val status = intent.getStringExtra("status").toString()

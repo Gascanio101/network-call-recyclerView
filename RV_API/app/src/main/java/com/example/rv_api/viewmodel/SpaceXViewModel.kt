@@ -2,12 +2,9 @@ package com.example.rv_api.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.rv_api.LaunchesAdapter
-import com.example.rv_api.SpaceXService
+import com.example.rv_api.networking.SpaceXService
 import com.example.rv_api.models.crew.Crew
-import com.example.rv_api.models.launches.upcoming.LaunchItem
-import kotlinx.android.synthetic.main.activity_main.*
+import com.example.rv_api.models.launches.upcoming_past.LaunchItem
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -90,7 +87,6 @@ class SpaceXViewModel : ViewModel () {
                             it.name,
                             it.links))
                     }
-
                     fillPreviousLaunches(tempList)
                 }
             }

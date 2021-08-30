@@ -1,11 +1,11 @@
-package com.example.rv_api
+package com.example.rv_api.models.crew
 
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.rv_api.models.crew.Crew
+import com.example.rv_api.R
 import com.example.rv_api.view.activities.CrewProfileActivity
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.crew_recycler_cell.view.*
@@ -15,11 +15,11 @@ class CrewAdapter(val crewList: MutableList<Crew.Astronaut>)
 
     class CrewViewHolder(itemView: View): RecyclerView.ViewHolder(itemView)
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CrewAdapter.CrewViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CrewViewHolder {
         return CrewViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.crew_recycler_cell, parent, false))
     }
 
-    override fun onBindViewHolder(holder: CrewAdapter.CrewViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: CrewViewHolder, position: Int) {
 
         // Inflate the recyclerView cell with some relevant info.
         holder.itemView.tv_crew_name.text = crewList[position].name

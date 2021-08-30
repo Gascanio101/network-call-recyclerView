@@ -1,22 +1,9 @@
-package com.example.rv_api.models.launches.upcoming
+package com.example.rv_api.models.launches.upcoming_past
 
 
 import com.google.gson.annotations.SerializedName
 
 data class LaunchItem(
-
-    /* TODO Future data-structure
-    @SerializedName("crew")
-    val crew: List<Any>,
-    @SerializedName("date_local")
-    val dateLocal: String,
-    @SerializedName("date_precision")
-    val datePrecision: String,
-    @SerializedName("date_unix")
-    val dateUnix: Int,
-    @SerializedName("date_utc")
-    val dateUtc: String,
-    */
 
     @SerializedName("details")
     val details: String?,
@@ -39,7 +26,7 @@ data class Links(
 
 data class Patch(
     @SerializedName("large")
-    val large: String,
+    val large: String?,
     @SerializedName("small")
-    val small: String
+    val small: String?
 )

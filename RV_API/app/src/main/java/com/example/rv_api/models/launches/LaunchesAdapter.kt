@@ -1,25 +1,27 @@
-package com.example.rv_api
+package com.example.rv_api.models.launches
 
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.rv_api.models.launches.upcoming.LaunchItem
-import com.example.rv_api.view.activities.CrewProfileActivity
+import com.example.rv_api.R
+import com.example.rv_api.models.launches.upcoming_past.LaunchItem
 import com.example.rv_api.view.activities.LaunchesDetailActivity
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.launches_recycler_cell.view.*
 
-class LaunchesAdapter (var launchesList: List<LaunchItem>)
-    : RecyclerView.Adapter<LaunchesAdapter.LaunchesViewHolder>() {
+class LaunchesAdapter(var launchesList: List<LaunchItem>) :
+    RecyclerView.Adapter<LaunchesAdapter.LaunchesViewHolder>() {
 
-        class LaunchesViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
+    class LaunchesViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LaunchesViewHolder {
 
-        return LaunchesViewHolder(LayoutInflater.from(parent.context)
-            .inflate(R.layout.launches_recycler_cell, parent, false))
+        return LaunchesViewHolder(
+            LayoutInflater.from(parent.context)
+                .inflate(R.layout.launches_recycler_cell, parent, false)
+        )
     }
 
     override fun onBindViewHolder(holder: LaunchesViewHolder, position: Int) {
@@ -27,13 +29,17 @@ class LaunchesAdapter (var launchesList: List<LaunchItem>)
         holder.itemView.tv_name.text = launchesList[position].name
         holder.itemView.tv_flight_number.text = launchesList[position].flightNumber.toString()
 
-        val launchImage = launchesList[position].links.patch.small
-        val launchImageIntent = launchesList[position].links.patch.large
         val launchImageHolder = holder.itemView.launches_home_iv
+        val launchImageIntent = launchesList[position].links.patch.large ?: "No image"
+
+        // launchImageHolder.setImageResource(R.drawable.default_launch)
+
+        val launchImage = launchesList[position].links.patch.small
+
         Picasso.with(holder.itemView.context)
             .load(launchImage)
             .placeholder(R.drawable.default_launch)
-            .resize(800,800)
+            .resize(800, 800)
             .centerInside()
             .into(launchImageHolder)
 

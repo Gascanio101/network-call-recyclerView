@@ -15,4 +15,6 @@
     <string name="number">Number: </string>
     <string name="past">Past</string>
     <string name="details">Details: </string>
+    <string name="agency">Agency: </string>
+    <string name="status">Status: </string>
 </resources>

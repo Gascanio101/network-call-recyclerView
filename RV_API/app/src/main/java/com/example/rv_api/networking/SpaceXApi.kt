@@ -1,7 +1,7 @@
-package com.example.rv_api
+package com.example.rv_api.networking
 
 import com.example.rv_api.models.crew.Crew
-import com.example.rv_api.models.launches.upcoming.Launches
+import com.example.rv_api.models.launches.Launches
 import retrofit2.Response
 import retrofit2.http.GET
 

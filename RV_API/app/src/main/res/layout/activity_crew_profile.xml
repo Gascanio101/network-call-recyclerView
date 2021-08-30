@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/iv_crew_profile"
-        android:layout_width="280dp"
-        android:layout_height="280dp"
+        android:layout_width="360dp"
+        android:layout_height="360dp"
         android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,34 +21,66 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:textSize="24sp"
-        android:textStyle="bold"
         android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="@+id/iv_crew_profile"
-        app:layout_constraintStart_toStartOf="@+id/iv_crew_profile"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_crewName"
         app:layout_constraintTop_toBottomOf="@+id/iv_crew_profile" />
 
     <TextView
         android:id="@+id/tv_profile_agency"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:textSize="24sp"
-        android:textStyle="bold"
+        android:layout_marginStart="16dp"
         android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="@+id/tv_profile_name"
-        app:layout_constraintStart_toStartOf="@+id/tv_profile_name"
-        app:layout_constraintTop_toBottomOf="@+id/tv_profile_name" />
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_crew_agency"
+        app:layout_constraintStart_toEndOf="@+id/tv_crew_agency"
+        app:layout_constraintTop_toTopOf="@+id/tv_crew_agency" />
 
     <TextView
         android:id="@+id/tv_profile_status"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:textSize="24sp"
-        android:textStyle="bold"
         android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="@+id/tv_profile_agency"
-        app:layout_constraintStart_toStartOf="@+id/tv_profile_agency"
-        app:layout_constraintTop_toBottomOf="@+id/tv_profile_agency" />
+        android:textSize="16sp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_crewStatus"
+        app:layout_constraintTop_toTopOf="@+id/tv_crewStatus"
+        app:layout_constraintStart_toEndOf="@id/tv_crewStatus" />
+
+    <TextView
+        android:id="@+id/tv_crewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/name"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/iv_crew_profile"
+        app:layout_constraintTop_toBottomOf="@+id/iv_crew_profile" />
+
+    <TextView
+        android:id="@+id/tv_crew_agency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/agency"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tv_crewName"
+        app:layout_constraintTop_toBottomOf="@+id/tv_crewName" />
+
+    <TextView
+        android:id="@+id/tv_crewStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/status"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tv_crew_agency"
+        app:layout_constraintTop_toBottomOf="@+id/tv_crew_agency" />
 </androidx.constraintlayout.widget.ConstraintLayout>

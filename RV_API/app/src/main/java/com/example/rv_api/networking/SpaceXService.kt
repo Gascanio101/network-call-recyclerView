@@ -1,4 +1,4 @@
-package com.example.rv_api
+package com.example.rv_api.networking
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
