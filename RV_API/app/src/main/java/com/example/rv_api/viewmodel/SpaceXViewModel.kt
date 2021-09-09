@@ -10,7 +10,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class SpaceXViewModel : ViewModel () {
+class SpaceXViewModel : ViewModel() {
     val upcomingLaunchesList: MutableLiveData<MutableList<LaunchItem>> by lazy {
         MutableLiveData<MutableList<LaunchItem>>()
     }
@@ -22,7 +22,6 @@ class SpaceXViewModel : ViewModel () {
     val crewList: MutableLiveData<MutableList<Crew.Astronaut>> by lazy {
         MutableLiveData<MutableList<Crew.Astronaut>>()
     }
-
 
     fun fillUpcomingLaunches(_tempList: MutableList<LaunchItem>) {
         upcomingLaunchesList.value = _tempList

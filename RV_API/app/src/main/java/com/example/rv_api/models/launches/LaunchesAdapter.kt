@@ -30,18 +30,22 @@ class LaunchesAdapter(var launchesList: List<LaunchItem>) :
         holder.itemView.tv_flight_number.text = launchesList[position].flightNumber.toString()
 
         val launchImageHolder = holder.itemView.launches_home_iv
+        val launchImage = launchesList[position].links.patch.small
+        when (launchImage) {
+            null -> launchImageHolder.setImageResource(R.drawable.default_launch)
+            else -> Picasso.with(holder.itemView.context)
+                .load(launchImage)
+                .resize(800, 800)
+                .centerInside()
+                .noFade()
+                .into(launchImageHolder)
+        }
         val launchImageIntent = launchesList[position].links.patch.large ?: "No image"
 
         // launchImageHolder.setImageResource(R.drawable.default_launch)
 
-        val launchImage = launchesList[position].links.patch.small
 
-        Picasso.with(holder.itemView.context)
-            .load(launchImage)
-            .placeholder(R.drawable.default_launch)
-            .resize(800, 800)
-            .centerInside()
-            .into(launchImageHolder)
+
 
         val intent: Intent = Intent(holder.itemView.context, LaunchesDetailActivity::class.java)
         holder.itemView.setOnClickListener {
